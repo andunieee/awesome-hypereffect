@@ -20,11 +20,12 @@ This list collects the protocol itself, its renderers, the tools and servers tha
 
 ## hyperb
 
-- [hyperb](https://github.com/hypereffect/hyperb) - A protocol that wraps hypereffect and adds transport and authentication primitives for remote and wasm-local apps over HTTP, iroh, and sandboxed WebAssembly, specified in [SPEC.md](https://github.com/hypereffect/hyperb/blob/master/SPEC.md), with clients for desktop, Android, terminal, and web.
+- [hyperb](https://github.com/hypereffect/hyperb) - A protocol that wraps hypereffect and adds transport and authentication primitives for remote and wasm-local apps over HTTP, iroh, and sandboxed WebAssembly, specified in [SPEC.md](https://github.com/hypereffect/hyperb/blob/master/SPEC.md), with clients for desktop, Android, terminal, and web, and the `hypb` CLI.
   - [desktop](https://github.com/hypereffect/hyperb/tree/master/crates/desktop) - A native browser for Linux, macOS, and Windows, with an address bar, tabs, history, and favorites.
   - [android](https://github.com/hypereffect/hyperb/tree/master/android) - A Kotlin Compose app for Android, backed by the `hyperb-mobile` JNI bridge, with history and favorites.
   - [tui](https://github.com/hypereffect/hyperb/tree/master/crates/tui) - A terminal renderer that shows the single app it was started with, `hyperb-tui <address>`, without an address bar, tabs, history, or favorites.
   - [web](https://github.com/hypereffect/hyperb/tree/master/crates/web) - A browser renderer built with Leptos and compiled to WebAssembly.
+  - [`hypb`](https://github.com/hypereffect/hyperb/tree/master/crates/cli) - A command-line client that prints an app's messages and state, fires actions, and runs scripts against it.
 
 ## Tool collections
 
