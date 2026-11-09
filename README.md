@@ -21,7 +21,7 @@ This list collects the protocol itself, its renderers, the tools and servers tha
 
 ## Renderers
 
-- [hyperb](https://github.com/hypereffect/hyperb) - A standalone browser for hypereffect applications on desktop, Android, terminal, and web. It opens `hyperb://` addresses over HTTP or iroh, or runs sandboxed WebAssembly modules locally, and ships demo apps such as a focus timer, a grammar checker, a SQL client, and a smart-home console.
+- [hyperb](https://github.com/hypereffect/hyperb) - A standalone browser for hypereffect applications on desktop, Android, terminal, and web. It opens `hyperb://` addresses over HTTP or [iroh](https://iroh.computer), or runs sandboxed WebAssembly modules locally, and ships demo apps such as a focus timer, a grammar checker, a SQL client, and a smart-home console.
 
 ## Tool collections
 
