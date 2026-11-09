@@ -17,7 +17,7 @@ This list collects the protocol itself, its renderers, the tools and servers tha
 
 ## The protocol
 
-- [hypereffect](https://github.com/hypereffect/hypereffect) - A small protocol for server-guided, reactive interfaces: elements, signals, CEL expressions, and actions, with implementations in Rust, TypeScript, Go, and Python.
+- [hypereffect](https://github.com/hypereffect/hypereffect) - A small protocol for server-guided, reactive interfaces: elements, signals, [CEL](https://cel.dev) expressions, and actions, with implementations in Rust, TypeScript, Go, and Python.
 
 ## Renderers
 
