@@ -9,7 +9,7 @@ This list collects the protocol itself, its renderers, the tools and servers tha
 ## Contents
 
 - [The protocol](#the-protocol)
-- [Renderers](#renderers)
+- [hyperb](#hyperb)
 - [Tool collections](#tool-collections)
 - [Applications](#applications)
 - [Resources](#resources)
@@ -18,9 +18,9 @@ This list collects the protocol itself, its renderers, the tools and servers tha
 
 - [hypereffect](https://github.com/hypereffect/hypereffect) - A small protocol for server-guided, reactive interfaces: elements, signals, [CEL](https://cel.dev) expressions, and actions, with implementations in Rust, TypeScript, Go, and Python.
 
-## Renderers
+## hyperb
 
-- [hyperb](https://github.com/hypereffect/hyperb) - A standalone browser for hypereffect applications on desktop, Android, terminal, and web. It opens `hyperb://` addresses over HTTP or [iroh](https://iroh.computer), or runs sandboxed WebAssembly modules locally, and ships demo apps such as a focus timer, a grammar checker, a SQL client, and a smart-home console.
+- [hyperb](https://github.com/hypereffect/hyperb) - A protocol that wraps hypereffect and adds transport and authentication primitives for remote and wasm-local apps over HTTP, iroh, and sandboxed WebAssembly, specified in [SPEC.md](https://github.com/hypereffect/hyperb/blob/master/SPEC.md), with clients for desktop, Android, terminal, and web.
   - [desktop](https://github.com/hypereffect/hyperb/tree/master/crates/desktop) - A native browser for Linux, macOS, and Windows, with an address bar, tabs, history, and favorites.
   - [android](https://github.com/hypereffect/hyperb/tree/master/android) - A Kotlin Compose app for Android, backed by the `hyperb-mobile` JNI bridge, with history and favorites.
   - [tui](https://github.com/hypereffect/hyperb/tree/master/crates/tui) - A terminal renderer that shows the single app it was started with, `hyperb-tui <address>`, without an address bar, tabs, history, or favorites.
