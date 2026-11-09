@@ -59,15 +59,10 @@ This list collects the protocol itself, its renderers, the tools and servers tha
 
 ## Resources
 
-- [hypereffect specification](https://hypereffect.dev/spec.html) - The wire protocol, message types, components, signals, expressions, and handlers.
 - [`hypereffect` on crates.io](https://crates.io/crates/hypereffect) - The Rust crate for building servers and renderers.
 - [`hypereffect` on npm](https://www.npmjs.com/package/hypereffect) - The TypeScript package for servers and renderers.
 - [`hypereffect-ui` on PyPI](https://pypi.org/project/hypereffect-ui/) - The Python package for servers and a renderer client.
 - [Go package](https://pkg.go.dev/github.com/hypereffect/hypereffect/go) - Go servers and a renderer client.
-- [hyperb web renderer](https://hypereffect.github.io/hyperb/) - Try hypereffect apps in the browser.
-- [hyperwasmtools catalogue](https://hypereffect.github.io/hyperwasmtools/) - Download or preview every hyperwasmtools module.
-- [CEL](https://cel.dev) - The expression language used for reactive attributes.
-- [iroh](https://iroh.computer) - The peer-to-peer transport used by hyperb, flipflop, grassline, cathode, and Cassis.
 
 ## Contributing
 
