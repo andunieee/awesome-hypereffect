@@ -22,25 +22,29 @@ This list collects the protocol itself, its renderers, the tools and servers tha
 ## Renderers
 
 - [hyperb](https://github.com/hypereffect/hyperb) - A standalone browser for hypereffect applications on desktop, Android, terminal, and web. It opens `hyperb://` addresses over HTTP or [iroh](https://iroh.computer), or runs sandboxed WebAssembly modules locally, and ships demo apps such as a focus timer, a grammar checker, a SQL client, and a smart-home console.
+  - [desktop](https://github.com/hypereffect/hyperb/tree/master/crates/desktop) - A native browser for Linux, macOS, and Windows, with an address bar, tabs, history, and favorites.
+  - [android](https://github.com/hypereffect/hyperb/tree/master/android) - A Kotlin Compose app for Android, backed by the `hyperb-mobile` JNI bridge, with history and favorites.
+  - [tui](https://github.com/hypereffect/hyperb/tree/master/crates/tui) - A terminal renderer that shows the single app it was started with, `hyperb-tui <address>`, without an address bar, tabs, history, or favorites.
+  - [web](https://github.com/hypereffect/hyperb/tree/master/crates/web) - A browser renderer built with Leptos and compiled to WebAssembly.
 
 ## Tool collections
 
 - [hyperwasmtools](https://github.com/hypereffect/hyperwasmtools) - Small, serverless tools packaged as sandboxed WebAssembly modules for hyperb. Each module runs entirely inside the renderer. Published at [hypereffect.github.io/hyperwasmtools](https://hypereffect.github.io/hyperwasmtools/).
-  - [qr](https://github.com/hypereffect/hyperwasmtools/blob/master/src/qr.rs) - Generate QR codes. ([hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/qr.wasm](hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/qr.wasm))
-  - [textutils](https://github.com/hypereffect/hyperwasmtools/blob/master/src/textutils.rs) - A pocket knife of small tools for text, data, numbers, encoding, hashing, compression, and more. ([hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/textutils.wasm](hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/textutils.wasm))
-  - [worldclock](https://github.com/hypereffect/hyperwasmtools/blob/master/src/worldclock.rs) - Live clocks across time zones, plus a time converter. ([hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/worldclock.wasm](hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/worldclock.wasm))
-  - [finance](https://github.com/hypereffect/hyperwasmtools/blob/master/src/finance.rs) - An RPN financial calculator in the spirit of the HP-12C, with time-value-of-money keys, cash flows, NPV, and IRR. ([hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/finance.wasm](hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/finance.wasm))
-  - [billsplit](https://github.com/hypereffect/hyperwasmtools/blob/master/src/billsplit.rs) - Split a bill: each person has a share and what they paid, and the remaining amount updates as you edit. ([hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/billsplit.wasm](hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/billsplit.wasm))
-  - [wordle](https://github.com/hypereffect/hyperwasmtools/blob/master/src/wordle.rs) - Guess the five-letter word in six tries, with proper repeated-letter scoring. ([hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/wordle.wasm](hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/wordle.wasm))
+  - [qr](https://github.com/hypereffect/hyperwasmtools/blob/master/src/qr.rs) - Generate QR codes. (`hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/qr.wasm`)
+  - [textutils](https://github.com/hypereffect/hyperwasmtools/blob/master/src/textutils.rs) - A pocket knife of small tools for text, data, numbers, encoding, hashing, compression, and more. (`hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/textutils.wasm`)
+  - [worldclock](https://github.com/hypereffect/hyperwasmtools/blob/master/src/worldclock.rs) - Live clocks across time zones, plus a time converter. (`hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/worldclock.wasm`)
+  - [finance](https://github.com/hypereffect/hyperwasmtools/blob/master/src/finance.rs) - An RPN financial calculator in the spirit of the HP-12C, with time-value-of-money keys, cash flows, NPV, and IRR. (`hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/finance.wasm`)
+  - [billsplit](https://github.com/hypereffect/hyperwasmtools/blob/master/src/billsplit.rs) - Split a bill: each person has a share and what they paid, and the remaining amount updates as you edit. (`hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/billsplit.wasm`)
+  - [wordle](https://github.com/hypereffect/hyperwasmtools/blob/master/src/wordle.rs) - Guess the five-letter word in six tries, with proper repeated-letter scoring. (`hyperb://hypereffect.github.io/hyperwasmtools/wasm-apps/wordle.wasm`)
 
   In a plain browser, any of these opens through the [hyperb web renderer](https://hypereffect.github.io/hyperb/) by passing its address as `link`, such as [qr](https://hypereffect.github.io/hyperb/?link=hyperb%3A%2F%2Fhypereffect.github.io%2Fhyperwasmtools%2Fwasm-apps%2Fqr.wasm).
 
 - [hyperutils](https://github.com/hypereffect/hyperutils) - Self-hosted, single-purpose servers for everyday coordination problems. Every server is one hypereffect app, served over HTTPS with Server-Sent Events or over iroh, and sees callers as sessions whose public key proves their identity.
-  - [bbs](https://github.com/hypereffect/hyperutils/tree/master/crates/bbs) - An old-school bulletin board with message boards, mail, and teleconference. ([hyperb://ff17a00e374e8f7e0bded3b91a0a0c7c43e8695cf61c8cda223b80e822aa57b2](hyperb://ff17a00e374e8f7e0bded3b91a0a0c7c43e8695cf61c8cda223b80e822aa57b2))
-  - [meet](https://github.com/hypereffect/hyperutils/tree/master/crates/meet) - A Doodle-style scheduler: share a code, mark the times that suit you, and watch everyone's answers update live. ([hyperb://meet.hypereffect.dev](hyperb://meet.hypereffect.dev))
-  - [forms](https://github.com/hypereffect/hyperutils/tree/master/crates/forms) - Build a form, share it, and read the answers as they come in; forms can expire after a day to a month. ([hyperb://forms.hypereffect.dev](hyperb://forms.hypereffect.dev))
-  - [tournament](https://github.com/hypereffect/hyperutils/tree/master/crates/tournament) - Round-robin fixtures and standings for a league or group, with one link for entering results and one for following along. ([hyperb://tournament.hypereffect.dev](hyperb://tournament.hypereffect.dev))
-  - [signup](https://github.com/hypereffect/hyperutils/tree/master/crates/signup) - Sign-up sheets for roles or things to bring, with every entry attributed to the person who wrote it. ([hyperb://signup.hypereffect.dev](hyperb://signup.hypereffect.dev))
+  - [bbs](https://github.com/hypereffect/hyperutils/tree/master/crates/bbs) - An old-school bulletin board with message boards, mail, and teleconference. (`hyperb://ff17a00e374e8f7e0bded3b91a0a0c7c43e8695cf61c8cda223b80e822aa57b2`)
+  - [meet](https://github.com/hypereffect/hyperutils/tree/master/crates/meet) - A Doodle-style scheduler: share a code, mark the times that suit you, and watch everyone's answers update live. (`hyperb://meet.hypereffect.dev`)
+  - [forms](https://github.com/hypereffect/hyperutils/tree/master/crates/forms) - Build a form, share it, and read the answers as they come in; forms can expire after a day to a month. (`hyperb://forms.hypereffect.dev`)
+  - [tournament](https://github.com/hypereffect/hyperutils/tree/master/crates/tournament) - Round-robin fixtures and standings for a league or group, with one link for entering results and one for following along. (`hyperb://tournament.hypereffect.dev`)
+  - [signup](https://github.com/hypereffect/hyperutils/tree/master/crates/signup) - Sign-up sheets for roles or things to bring, with every entry attributed to the person who wrote it. (`hyperb://signup.hypereffect.dev`)
 
   In a plain browser, any of these opens as `https://hypereffect.github.io/hyperb/?link=hyperb%3A%2F%2F<host>`, such as [meet](https://hypereffect.github.io/hyperb/?link=hyperb%3A%2F%2Fmeet.hypereffect.dev).
 
