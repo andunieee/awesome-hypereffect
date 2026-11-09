@@ -12,7 +12,6 @@ This list collects the protocol itself, its renderers, the tools and servers tha
 - [Renderers](#renderers)
 - [Tool collections](#tool-collections)
 - [Applications](#applications)
-- [Cassis](#cassis)
 - [Resources](#resources)
 
 ## The protocol
@@ -55,9 +54,6 @@ This list collects the protocol itself, its renderers, the tools and servers tha
 - [garden](https://github.com/andunieee/garden) - A Blossom file server where files stay alive as long as someone keeps paying for them: nostr-keyed accounts, Arkade payments, per-file rent, B2/S3/R2 storage backends, and a hyperb operator dashboard.
 - [Grassline](https://github.com/andunieee/grassline) - Run Claude Code, opencode, Codex, and other coding agents on your own computer and talk to them from your phone over iroh. Includes a lightweight Rust daemon, an Android app, and a hyperb admin dashboard.
 - [Cathode](https://github.com/andunieee/cathode) - A YouTube client for the desktop with search, a queue, automatic downloads for offline playback, chapters and subtitles, plus a phone remote control built with iroh and hyperb.
-
-## Cassis
-
 - [Cassis Order Protocol](https://github.com/cassiscash/cassis_order_protocol) - A specification for streaming an order page from a merchant to a customer's wallet over iroh and getting paid at the end. It extends hypereffect with `invoice` and `invoicerequest` messages, connection URIs, and resumable orders.
 - [cassis-routerd](https://github.com/cassiscash/cassis/tree/master/cassis-routerd) - A Cassis router daemon that opens the configured networks, routes and announces hops, and keeps wallets refreshed. Supports Arkade, Lightning, Cashu, Fedimint, Liquid, Rootstock, Bitcoin, and Bark through cargo features, and serves a hyperb admin interface.
 
